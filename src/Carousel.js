@@ -1,10 +1,13 @@
 import React from "react";
 
 class Carousel extends React.Component {
-  state = {
-    photos: [],
-    active: 0,
-  };
+    constructor(props){
+        super(props);
+        this.state = {
+          photos: [],
+          active: 0,
+        };
+    }
   static getDerivedStateFromProps({ media }) {
     let photos = ["http://placecorgi.com/600/600"];
     if (media.length) {
